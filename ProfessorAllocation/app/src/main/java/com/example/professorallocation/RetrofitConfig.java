@@ -1,6 +1,7 @@
 package com.example.professorallocation;
 
 import com.example.professorallocation.service.DepartmentService;
+import com.example.professorallocation.service.ProfessorService;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -20,5 +21,8 @@ public class RetrofitConfig {
 
     public DepartmentService departmentService(){
         return retrofit.create(DepartmentService.class);
+    }
+    public ProfessorService professorService(){
+        return retrofit.create(ProfessorService.class);
     }
 }

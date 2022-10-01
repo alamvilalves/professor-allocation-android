@@ -4,15 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/purple_200">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="149dp"
+        android:layout_height="82dp"
+        android:background="#673AB7"
+        android:backgroundTint="#673AB7"
+        android:text="Allocation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        app:layout_constraintVertical_bias="0.167" />
+
+    <Button
+        android:id="@+id/btProfessor"
+        android:layout_width="149dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="56dp"
+        android:background="#673AB7"
+        android:backgroundTint="#673AB7"
+        android:text="Professor"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="149dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="56dp"
+        android:background="#673AB7"
+        android:backgroundTint="#673AB7"
+        android:text="Course"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btDepartment"
+        android:layout_width="149dp"
+        android:layout_height="82dp"
+        android:background="#673AB7"
+        android:backgroundTint="#673AB7"
+        android:text="Department"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btProfessor"
+        app:layout_constraintTop_toBottomOf="@+id/btProfessor"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="355dp"
+        android:layout_height="99dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125"
+        app:srcCompat="@drawable/professor_allocation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

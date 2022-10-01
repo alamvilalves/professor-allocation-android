@@ -1,8 +1,6 @@
 package com.example.professorallocation.model;
 
-import java.util.List;
-
-public class DepartmentRes {
+public class ProfessorRes {
     private Long id;
     private String name;
     //private List<ProfessorRes> professors;
