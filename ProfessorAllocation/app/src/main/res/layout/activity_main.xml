@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/purple_200">
+    android:background="@color/purple_200"
+    tools:context=".MainActivity">
 
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btAllocation"
         android:layout_width="149dp"
         android:layout_height="82dp"
         android:background="#673AB7"
         android:backgroundTint="#673AB7"
         android:text="Allocation"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintEnd_toEndOf="@+id/btCourse"
+        app:layout_constraintTop_toBottomOf="@+id/btCourse"
+        app:layout_constraintVertical_bias="0.165" />
 
     <Button
         android:id="@+id/btProfessor"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btCourse"
         android:layout_width="149dp"
         android:layout_height="82dp"
         android:layout_marginTop="56dp"

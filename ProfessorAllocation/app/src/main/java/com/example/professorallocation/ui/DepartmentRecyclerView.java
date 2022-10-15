@@ -44,6 +44,8 @@ public class DepartmentRecyclerView extends AppCompatActivity {
         rvList.setAdapter(adapter);
     }
     protected void getAllDepartments(DepartmentService service) {
+        final LoaddingDialog dialog = new LoaddingDialog(this);
+        dialog.startDialog();
         service.getAll().enqueue(
                 new Callback<List<DepartmentRes>>() {
                     @Override
@@ -59,11 +61,13 @@ public class DepartmentRecyclerView extends AppCompatActivity {
                             }
                             */
                         //}
+                        dialog.dismissDialog();
                     }
 
                     @Override
                     public void onFailure(Call<List<DepartmentRes>> call, Throwable t) {
                         Toast.makeText(getApplicationContext(), "Erro de Requisição", Toast.LENGTH_SHORT).show();
+                        dialog.dismissDialog();
                     }
                 }
         );

@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.professorallocation.R;
 import com.example.professorallocation.RetrofitConfig;
-import com.example.professorallocation.model.ProfessorRes;
-import com.example.professorallocation.service.ProfessorService;
+import com.example.professorallocation.model.AllocationRes;
+import com.example.professorallocation.service.AllocationService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,42 +21,42 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ProfessorRecyclerView extends AppCompatActivity {
+public class AllocationRecyclerView extends AppCompatActivity {
 
     //DepartmentService retrofit = RetrofitConfig.newInstance().departmentService();
     private RecyclerView rvList;
-    private ProfessorAdapter adapter;
+    private AllocationAdapter adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_professor_recycler_view);
+        setContentView(R.layout.activity_allocation_recycler_view);
 
-        ProfessorService service = RetrofitConfig
+        AllocationService service = RetrofitConfig
                 .newInstance()
-                .professorService();
+                .allocationService();
 
-        adapter = new ProfessorAdapter(new ArrayList<>());
-        getAllProfessors(service);
+        adapter = new AllocationAdapter(new ArrayList<>());
+        getAllAllocations(service);
 
-        rvList = findViewById(R.id.rvProfList);
+        rvList = findViewById(R.id.rvAllocationList);
         rvList.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         rvList.setAdapter(adapter);
     }
-    protected void getAllProfessors(ProfessorService service) {
+    protected void getAllAllocations(AllocationService service) {
         final LoaddingDialog dialog = new LoaddingDialog(this);
         dialog.startDialog();
         service.getAll().enqueue(
-                new Callback<List<ProfessorRes>>() {
+                new Callback<List<AllocationRes>>() {
                     @Override
-                    public void onResponse(Call<List<ProfessorRes>> call, Response<List<ProfessorRes>> response) {
-                        List<ProfessorRes> lista = response.body();
-                        adapter.configureProfessors(lista);
+                    public void onResponse(Call<List<AllocationRes>> call, Response<List<AllocationRes>> response) {
+                        List<AllocationRes> lista = response.body();
+                        adapter.configureAllocations(lista);
                         dialog.dismissDialog();
                         //for (DepartmentRes item : list) {
                             //Log.i(">>>", item.getId() + "->" + item.getName());
                             /*
-                            for (ProfessorRes prof : item.getProfessors()) {
+                            for (AllocationRes prof : item.getAllocations()) {
                                 Log.i(">>>", prof.getName());
                             }
                             */
@@ -64,7 +64,7 @@ public class ProfessorRecyclerView extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onFailure(Call<List<ProfessorRes>> call, Throwable t) {
+                    public void onFailure(Call<List<AllocationRes>> call, Throwable t) {
                         dialog.dismissDialog();
                         Toast.makeText(getApplicationContext(), "Erro de Requisição", Toast.LENGTH_SHORT).show();
                     }

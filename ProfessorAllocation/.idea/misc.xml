@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_allocation_item_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_allocation_recycler_view.xml" value="0.22" />
+        <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_course_item_layout.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_course_recycler_view.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_department_item_layout.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_department_recycler_view.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_item_layout.xml" value="0.146875" />
@@ -10,6 +14,7 @@
         <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_professor_item_layout.xml" value="0.1" />
         <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_professor_recycler_view.xml" value="0.1" />
         <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/activity_recycler_view.xml" value="0.146875" />
+        <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/layout/loadding.xml" value="0.1" />
         <entry key="..\:/Users/alamv/AndroidStudioProjects/professor-allocation-android/ProfessorAllocation/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.143" />
       </map>
     </option>

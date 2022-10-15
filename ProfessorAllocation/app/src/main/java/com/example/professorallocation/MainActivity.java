@@ -10,12 +10,18 @@ import android.widget.Toast;
 import com.example.professorallocation.model.DepartmentDTO;
 import com.example.professorallocation.model.DepartmentRes;
 import com.example.professorallocation.service.DepartmentService;
+import com.example.professorallocation.ui.AllocationRecyclerView;
 import com.example.professorallocation.ui.DepartmentRecyclerView;
 
 import com.example.professorallocation.model.ProfessorDTO;
 import com.example.professorallocation.model.ProfessorRes;
 import com.example.professorallocation.service.ProfessorService;
 import com.example.professorallocation.ui.ProfessorRecyclerView;
+
+import com.example.professorallocation.model.CourseDTO;
+import com.example.professorallocation.model.CourseRes;
+import com.example.professorallocation.service.CourseService;
+import com.example.professorallocation.ui.CourseRecyclerView;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -56,6 +62,16 @@ public class MainActivity extends AppCompatActivity {
         btProfessor.setOnClickListener(view -> {
             Intent telaProfessor = new Intent(getApplicationContext(), ProfessorRecyclerView.class);
             startActivity(telaProfessor);
+        });
+        btCourse = findViewById(R.id.btCourse);
+        btCourse.setOnClickListener(view -> {
+            Intent telaCourse = new Intent(getApplicationContext(), CourseRecyclerView.class);
+            startActivity(telaCourse);
+        });
+        btAllocation = findViewById(R.id.btAllocation);
+        btAllocation.setOnClickListener(view -> {
+            Intent telaAllocation = new Intent(getApplicationContext(), AllocationRecyclerView.class);
+            startActivity(telaAllocation);
         });
 
     }

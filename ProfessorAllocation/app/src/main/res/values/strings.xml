@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">ProfessorAllocation</string>
     <string name="DepartmentName">Departamento Name</string>
+    <string name="CourseName">Course Name</string>
+    <string name="AllocationDay">AllocationDay</string>
+    <string name="AllocationStartEnd">09:00 - 22:00</string>
+    <string name="AllocationProfessor">AllocationProfessor</string>
+    <string name="AllocationCourse">AllocationCourse</string>
 </resources>
